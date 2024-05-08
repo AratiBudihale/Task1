@@ -68,7 +68,7 @@ function Today(person){
         let day = new Date(data.birthday).getDate();
         let month = new Date(data.birthday).getMonth();
 
-        return currentDay == day && currentMonth == month;
+        return currentDay === day && currentMonth === month;
     })
     return filter;
 }
@@ -83,7 +83,7 @@ function Upcoming(person, toMonth){
         let month = new Date(data.birthday).getMonth();
         let day = new Date(data.birthday).getDate();
 
-        if (currentDay == day) return;
+        if (currentDay === day) return 0;
         return month >= currentMonth && month <= currentMonth + toMonth;
     })
 
